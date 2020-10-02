@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2383dc"],{ff17:function(e,n,a){"use strict";a.r(n);var t=function(){var e=this,n=e.$createElement,a=e._self._c||n;return a("div",{staticClass:"app-container"},[e._v(" Employee Management ")])},c=[],l={name:"EmployeeManagement"},s=l,o=a("2877"),p=Object(o["a"])(s,t,c,!1,null,null,null);n["default"]=p.exports}}]);
-//# sourceMappingURL=chunk-2d2383dc.2c3d2de0.js.map

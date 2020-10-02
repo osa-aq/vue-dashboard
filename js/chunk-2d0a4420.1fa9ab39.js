@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0a4420"],{"0659":function(n,a,e){"use strict";e.r(a);var t=function(){var n=this,a=n.$createElement,e=n._self._c||a;return e("div",{staticClass:"app-container"},[n._v(" Tabs Management ")])},s=[],c={name:"TabsManagement"},l=c,u=e("2877"),i=Object(u["a"])(l,t,s,!1,null,null,null);a["default"]=i.exports}}]);
-//# sourceMappingURL=chunk-2d0a4420.1fa9ab39.js.map
