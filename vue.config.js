@@ -1,4 +1,6 @@
 // vue.config.js
 module.exports = {
-    publicPath: '/vue-dashboard/'
+    publicPath: '/',
+    outputDir: 'dist',
+    assetsDir: 'static',
 }
