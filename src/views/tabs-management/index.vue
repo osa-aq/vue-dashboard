@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        <h2>Tabs Management</h2>
+        Tabs Management
     </div>
 </template>
 

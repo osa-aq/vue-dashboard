@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        <h2>Account Settings</h2>
+        Account Settings
     </div>
 </template>
 

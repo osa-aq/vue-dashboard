@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        <h2>Cash Management</h2>
+        Cash Management
     </div>
 </template>
 
