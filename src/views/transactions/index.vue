@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        Transactions
+        <h2>Transactions</h2>
     </div>
 </template>
 

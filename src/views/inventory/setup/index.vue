@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        Inventory Setup
+        <h2>Inventory Setup</h2>
     </div>
 </template>
 

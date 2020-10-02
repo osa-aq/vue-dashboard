@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        Customers
+        <h2>Customers</h2>
     </div>
 </template>
 

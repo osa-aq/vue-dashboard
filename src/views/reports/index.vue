@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        Reports
+        <h2>Reports</h2>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        Catalog
+        <h2>Catalog</h2>
     </div>
 </template>
 
