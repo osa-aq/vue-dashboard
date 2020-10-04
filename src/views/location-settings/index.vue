@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        Location Settings
+        <h2>Location Settings</h2>
     </div>
 </template>
 

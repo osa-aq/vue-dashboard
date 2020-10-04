@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        Employee Management
+        <h2>Employee Management</h2>
     </div>
 </template>
 
