@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "930dd69a7add3c7eb91a",
-    "url": "/vue-dashboard/css/app.935c011d.css"
+    "revision": "0e8aebfcadf4049b2455",
+    "url": "/vue-dashboard/css/app.b09e7174.css"
   },
   {
     "revision": "2fd6477ebf42103ba1d7",
@@ -28,56 +28,56 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-dashboard/img/white-logo.313ded53.png"
   },
   {
-    "revision": "cfdbcacf4d7aad42f17be7381b5657fb",
+    "revision": "962b5898b04d1816491ce205181229eb",
     "url": "/vue-dashboard/index.html"
   },
   {
-    "revision": "930dd69a7add3c7eb91a",
-    "url": "/vue-dashboard/js/app.b76438e8.js"
+    "revision": "0e8aebfcadf4049b2455",
+    "url": "/vue-dashboard/js/app.9830c31e.js"
   },
   {
-    "revision": "d2f1fd2426ec95a30868",
-    "url": "/vue-dashboard/js/chunk-2d0a4420.1fa9ab39.js"
+    "revision": "4e7af887f1f75aa24325",
+    "url": "/vue-dashboard/js/chunk-2d0a4420.33291db7.js"
   },
   {
-    "revision": "95b32482d9ee140693e7",
-    "url": "/vue-dashboard/js/chunk-2d0b2c6c.ca3438a2.js"
+    "revision": "bfaeef0d40681f37540d",
+    "url": "/vue-dashboard/js/chunk-2d0b2c6c.c5f5f17e.js"
   },
   {
-    "revision": "04e0e9e1faa1b1ebff7d",
-    "url": "/vue-dashboard/js/chunk-2d0ce738.67617fff.js"
+    "revision": "08b1a0b346f2f196738d",
+    "url": "/vue-dashboard/js/chunk-2d0ce738.ea7fc9a4.js"
   },
   {
     "revision": "e85c61bb22fb04807158",
     "url": "/vue-dashboard/js/chunk-2d0cef14.584bc872.js"
   },
   {
-    "revision": "f0192d87e637c1d36a12",
-    "url": "/vue-dashboard/js/chunk-2d0d08fb.ff17f66d.js"
+    "revision": "bdea40c42b7e352675eb",
+    "url": "/vue-dashboard/js/chunk-2d0d08fb.4516fb61.js"
   },
   {
-    "revision": "b4de5c03367f5c7b5956",
-    "url": "/vue-dashboard/js/chunk-2d0d5c0e.a8013b34.js"
+    "revision": "d4c418cb7df35c707880",
+    "url": "/vue-dashboard/js/chunk-2d0d5c0e.8013156d.js"
   },
   {
-    "revision": "1f9535d0c555743d317d",
-    "url": "/vue-dashboard/js/chunk-2d0efc73.93941f69.js"
+    "revision": "b50d7284a929ae91f57c",
+    "url": "/vue-dashboard/js/chunk-2d0efc73.e397938d.js"
   },
   {
-    "revision": "38470a1e7cf3f6125857",
-    "url": "/vue-dashboard/js/chunk-2d207778.26d2f8da.js"
+    "revision": "a3a72396731e03def9d9",
+    "url": "/vue-dashboard/js/chunk-2d207778.8e52ebb7.js"
   },
   {
-    "revision": "5ff3b474a97a8d1256d6",
-    "url": "/vue-dashboard/js/chunk-2d216462.4569a034.js"
+    "revision": "5de79282cfd7617e2456",
+    "url": "/vue-dashboard/js/chunk-2d216462.16bb23f0.js"
   },
   {
-    "revision": "1c8478cec6db723cea7b",
-    "url": "/vue-dashboard/js/chunk-2d2300f2.652a33b7.js"
+    "revision": "ed1c7e300d04ac35cbe1",
+    "url": "/vue-dashboard/js/chunk-2d2300f2.13bb100f.js"
   },
   {
-    "revision": "9fcb1651e831274e41fe",
-    "url": "/vue-dashboard/js/chunk-2d2383dc.2c3d2de0.js"
+    "revision": "6b860d34b22a0110d647",
+    "url": "/vue-dashboard/js/chunk-2d2383dc.5a27dbfa.js"
   },
   {
     "revision": "2fd6477ebf42103ba1d7",
