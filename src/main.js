@@ -13,9 +13,7 @@ import '@/styles/index.scss'
 
 Vue.use(ElementUI)
 
-if (process.env.NODE_ENV === "development") {
-  makeServer()
-}
+makeServer()
 
 Vue.config.productionTip = false
 

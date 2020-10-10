@@ -8,9 +8,8 @@ import transactionsData from './transactions-data.json'
 import averageData from './average-data.json'
 import refundsData from './refunds-data.json'
 
-export function makeServer({ environment = "development" } = {}) {
+export function makeServer() {
     const server = new Server({
-        environment,
         routes() {
             this.namespace = "api"
 
