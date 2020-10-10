@@ -3,7 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import {makeServer} from '../mock/server'
+import {makeServer} from './mock/server'
 
 // Style
 import 'normalize.css/normalize.css'
