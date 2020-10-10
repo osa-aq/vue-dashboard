@@ -1,0 +1,29 @@
+{
+    "xAxis":{
+        "data":[
+           "Mon",
+           "Tue",
+           "Wed",
+           "Thu",
+           "Fri",
+           "Sat",
+           "Sun"
+        ]
+     },
+     "title":{
+        "left":"center",
+        "text":"Total Sales in Locations for Past 7 Days"
+     },
+     "series": {
+        "name":"Total Sales",
+        "data":[
+            0,
+            100,
+            901,
+            934,
+            1290,
+            1330,
+            700
+         ]
+     }
+}

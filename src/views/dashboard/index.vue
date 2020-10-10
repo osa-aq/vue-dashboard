@@ -13,23 +13,23 @@
     <panel-group />
 
     <el-row class="line-chart-row">
-      <line-chart />
+      <line-chart :data="lineChartData" />
     </el-row>
 
     <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
-          <raddar-chart />
+          <raddar-chart :data="raddarChartData" />
         </div>
       </el-col>
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
-          <pie-chart />
+          <pie-chart :data="pieChartData" />
         </div>
       </el-col>
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
-          <bar-chart />
+          <bar-chart :data="barChartData" />
         </div>
       </el-col>
     </el-row>
@@ -43,6 +43,7 @@ import RaddarChart from './components/RaddarChart'
 import PieChart from './components/PieChart'
 import BarChart from './components/BarChart'
 import PanelGroup from './components/PanelGroup'
+import api from '@/api/charts'
 
 export default {
   name: 'Dashboard',
@@ -53,7 +54,11 @@ export default {
         { value: 'egypt', label: 'Egypt' },
         { value: 'kuwait', label: 'Kuwait' }
       ],
-      value: 'jordan'
+      value: 'jordan',
+      raddarChartData: null,
+      pieChartData: null,
+      lineChartData: null,
+      barChartData: null
     }
   },
   components: {
@@ -62,6 +67,12 @@ export default {
     PieChart,
     BarChart,
     PanelGroup
+  },
+  mounted() {
+    this.raddarChartData = api.getRaddarChartData()
+    this.pieChartData = api.getPieChartData()
+    this.lineChartData = api.getLineChartData()
+    this.barChartData = api.getBarChartData()
   }
 }
 </script>

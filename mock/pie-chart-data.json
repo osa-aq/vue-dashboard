@@ -1,0 +1,35 @@
+{
+    "legend": {
+        "data": [
+            "Cash",
+            "Credit Card",
+            "Debit Card",
+            "Digital Wallet",
+            "Check"
+        ]
+    },
+    "series": {
+        "data": [
+            {
+                "value":320,
+                "name":"Cash"
+             },
+             {
+                "value":240,
+                "name":"Credit Card"
+             },
+             {
+                "value":149,
+                "name":"Debit Card"
+             },
+             {
+                "value":100,
+                "name":"Digital Wallet"
+             },
+             {
+                "value":59,
+                "name":"Check"
+             }
+        ]
+    }
+}

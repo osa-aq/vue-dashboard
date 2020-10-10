@@ -1,11 +1,12 @@
 <template>
-  <div :class="className" :style="{height:height,width:width}" />
+  <div :class="className" :style="{height:height,width:width}" v-loading="loading" />
 </template>
 
 <script>
 import echarts from 'echarts'
 require('echarts/theme/macarons') // echarts theme
 import resize from './mixins/resize'
+import pieConfigs from '@/configs/charts/pie.json'
 export default {
   mixins: [resize],
   props: {
@@ -20,16 +21,22 @@ export default {
     height: {
       type: String,
       default: '300px'
+    },
+    data: {
+      default: null
     }
   },
   data() {
     return {
-      chart: null
+      chart: null,
+      loading: true
     }
   },
   mounted() {
     this.$nextTick(() => {
-      this.initChart()
+      if ( this.data ) {
+        this.initChart()
+      }
     })
   },
   beforeDestroy() {
@@ -41,36 +48,15 @@ export default {
   },
   methods: {
     initChart() {
-      this.chart = echarts.init(this.$el, 'macarons')
-      this.chart.setOption({
-        tooltip: {
-          trigger: 'item',
-          formatter: '{a} <br/>{b} : {c} ({d}%)'
-        },
-        legend: {
-          left: 'center',
-          bottom: '10',
-          data: ['Cash', 'Credit Card', 'Debit Card', 'Digital Wallet', 'Check']
-        },
-        series: [
-          {
-            name: 'WEEKLY WRITE ARTICLES',
-            type: 'pie',
-            roseType: 'radius',
-            radius: [15, 95],
-            center: ['50%', '38%'],
-            data: [
-              { value: 320, name: 'Cash' },
-              { value: 240, name: 'Credit Card' },
-              { value: 149, name: 'Debit Card' },
-              { value: 100, name: 'Digital Wallet' },
-              { value: 59, name: 'Check' }
-            ],
-            animationEasing: 'cubicInOut',
-            animationDuration: 2600
-          }
-        ]
-      })
+      this.data.then((response)=>{
+        this.loading = false;
+        this.chart = echarts.init(this.$el, 'macarons')
+        
+        pieConfigs.legend.data = response.data.legend.data
+        pieConfigs.series[0].data = response.data.series.data
+
+        this.chart.setOption(pieConfigs)
+      });
     }
   }
 }

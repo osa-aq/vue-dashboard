@@ -1,11 +1,12 @@
 <template>
-  <div :class="className" :style="{height:height,width:width}" />
+  <div :class="className" :style="{height:height,width:width}" v-loading="loading" />
 </template>
 
 <script>
 import echarts from 'echarts'
 require('echarts/theme/macarons') // echarts theme
 import resize from './mixins/resize'
+import lineConfigs from '@/configs/charts/line.json'
 export default {
   mixins: [resize],
   props: {
@@ -24,16 +25,22 @@ export default {
     autoResize: {
       type: Boolean,
       default: true
+    },
+    data: {
+      default: null
     }
   },
   data() {
     return {
-      chart: null
+      chart: null,
+      loading: true
     }
   },
   mounted() {
     this.$nextTick(() => {
-      this.initChart()
+      if ( this.data ) {
+        this.initChart()
+      }
     })
   },
   beforeDestroy() {
@@ -45,57 +52,16 @@ export default {
   },
   methods: {
     initChart() {
-      this.chart = echarts.init(this.$el, 'macarons')
-      this.setOptions()
-    },
-    setOptions() {
-      this.chart.setOption({
-        xAxis: {
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-          boundaryGap: false,
-          axisTick: {
-            show: false
-          }
-        },
-        grid: {
-          left: 10,
-          right: 10,
-          bottom: 20,
-          top: 30,
-          containLabel: true
-        },
-        tooltip: {
-          trigger: 'axis',
-          axisPointer: {
-            type: 'cross'
-          },
-          padding: [5, 10]
-        },
-        yAxis: {
-          axisTick: {
-            show: false
-          }
-        },
-        title: {
-          left: 'center',
-          text: 'Total Sales in Locations for Past 7 Days',
-        },
-        series: [{
-          name: 'Total Sales', itemStyle: {
-            normal: {
-              color: '#FF005A',
-              lineStyle: {
-                color: '#FF005A',
-                width: 2
-              }
-            }
-          },
-          smooth: false,
-          type: 'line',
-          data: [0, 100, 901, 934, 1290, 1330, 700],
-          animationDuration: 2800,
-          animationEasing: 'cubicInOut'
-        }]
+      this.data.then((response)=>{
+        this.loading = false;
+        this.chart = echarts.init(this.$el, 'macarons')
+
+        lineConfigs.xAxis.data = response.data.xAxis.data
+        lineConfigs.title = response.data.title
+        lineConfigs.series[0].data = response.data.series.data
+        lineConfigs.series[0].name = response.data.series.name
+
+        this.chart.setOption(lineConfigs)
       })
     }
   }

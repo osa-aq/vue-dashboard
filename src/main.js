@@ -3,6 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import {makeServer} from '../mock/server'
 
 // Style
 import 'normalize.css/normalize.css'
@@ -11,6 +12,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@/styles/index.scss'
 
 Vue.use(ElementUI)
+
+if (process.env.NODE_ENV === "development") {
+  makeServer()
+}
 
 Vue.config.productionTip = false
 

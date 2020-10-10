@@ -1,61 +1,61 @@
 <template>
   <el-row :gutter="40" class="panel-group">
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel">
+      <div class="card-panel" v-loading="!totalData">
         <div class="card-panel-icon-wrapper icon-people">
           <i class="el-icon-s-finance card-panel-icon"></i>
         </div>
-        <div class="card-panel-description">
+        <div class="card-panel-description" v-if="totalData">
           <div class="card-panel-text-container">
             <div class="card-panel-text">
               Total
             </div>
-            <count-to :start-val="0" :end-val="102400" :duration="2600" class="card-panel-num" /> JOD
+            <count-to :start-val="0" :end-val="totalData" :duration="2600" class="card-panel-num" /> JOD
           </div>
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel">
+      <div class="card-panel" v-loading="!transactionsData">
         <div class="card-panel-icon-wrapper icon-message">
           <i class="el-icon-s-marketing card-panel-icon"></i>
         </div>
-        <div class="card-panel-description">
+        <div class="card-panel-description" v-if="transactionsData">
           <div class="card-panel-text-container">
             <div class="card-panel-text">
               Transactions
             </div>
-            <count-to :start-val="0" :end-val="81212" :duration="3000" class="card-panel-num" /> JOD
+            <count-to :start-val="0" :end-val="transactionsData" :duration="3000" class="card-panel-num" /> JOD
           </div>
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel">
+      <div class="card-panel" v-loading="!averageData">
         <div class="card-panel-icon-wrapper icon-money">
           <i class="el-icon-s-data card-panel-icon"></i>
         </div>
-        <div class="card-panel-description">
+        <div class="card-panel-description" v-if="averageData">
           <div class="card-panel-text-container">
             <div class="card-panel-text">
               Average
             </div>
-            <count-to :start-val="0" :end-val="9280" :duration="3200" class="card-panel-num" /> JOD
+            <count-to :start-val="0" :end-val="averageData" :duration="3200" class="card-panel-num" /> JOD
           </div>
         </div>
       </div>
     </el-col>
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel">
+      <div class="card-panel" v-loading="!refundsData">
         <div class="card-panel-icon-wrapper icon-shopping">
           <i class="el-icon-bottom card-panel-icon"></i>
         </div>
-        <div class="card-panel-description">
+        <div class="card-panel-description" v-if="refundsData">
           <div class="card-panel-text-container">
             <div class="card-panel-text">
               Refunds
             </div>
-            <count-to :start-val="0" :end-val="13600" :duration="3600" class="card-panel-num" /> JOD
+            <count-to :start-val="0" :end-val="refundsData" :duration="3600" class="card-panel-num" /> JOD
           </div>
         </div>
       </div>
@@ -65,10 +65,37 @@
 
 <script>
 import CountTo from 'vue-count-to'
+import api from '@/api/panel'
 
 export default {
+    name: "PanelGroup",
+    data() {
+      return {
+        totalData: 0,
+        transactionsData: 0,
+        averageData: 0,
+        refundsData: 0
+      }
+    },
     components: {
         CountTo
+    },
+    mounted() {
+      api.getTotalData().then((response)=>{
+        this.totalData = response.data.total
+      })
+
+      api.getTransactionsData().then((response)=>{
+        this.transactionsData = response.data.transactions
+      })
+
+      api.getAverageData().then((response)=>{
+        this.averageData = response.data.average
+      })
+
+      api.getRefundsData().then((response)=>{
+        this.refundsData = response.data.refunds
+      })
     }
 }
 </script>
