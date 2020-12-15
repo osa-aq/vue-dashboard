@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6d3341913c1e0a86b211",
-    "url": "/vue-dashboard/css/app.b09e7174.css"
+    "revision": "54b52ebf5ef340a06f39",
+    "url": "/vue-dashboard/css/app.a3bf89ad.css"
   },
   {
     "revision": "23321755e6ed4db8d700",
@@ -24,16 +24,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-dashboard/img/ezgif.com-gif-maker.fb863a9b.gif"
   },
   {
-    "revision": "313ded53325f2dfc10a7bf1855605490",
-    "url": "/vue-dashboard/img/white-logo.313ded53.png"
+    "revision": "82b9c7a5a3f405032b1db71a25f67021",
+    "url": "/vue-dashboard/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "455d7e130a1e8ebdff1583d06cdcbfd5",
+    "revision": "fa79fdef6f6caf60a6b9442c631d1561",
     "url": "/vue-dashboard/index.html"
   },
   {
-    "revision": "6d3341913c1e0a86b211",
-    "url": "/vue-dashboard/js/app.46d4a082.js"
+    "revision": "54b52ebf5ef340a06f39",
+    "url": "/vue-dashboard/js/app.c3b2dc0d.js"
   },
   {
     "revision": "69b6cc143e1288f92e12",
