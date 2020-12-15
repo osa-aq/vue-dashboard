@@ -1,6 +1,6 @@
 const state = {
   fixedHeader: false,
-  sidebarLogo: true
+  sidebarLogo: false
 }
 
 const mutations = {

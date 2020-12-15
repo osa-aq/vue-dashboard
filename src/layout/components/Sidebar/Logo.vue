@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import logo from '@/assets/white-logo.png'
+import logo from '@/assets/logo.png'
 
 export default {
   name: 'SidebarLogo',
@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      title: 'POSRocket',
+      title: '',
       logo: logo
     }
   }
